@@ -224,9 +224,9 @@ class Jps(object):
         if direction.i != 0 and direction.j != 0:
             if self.isForcedNeighbor(Grid(current_node.i-direction.i,current_node.j+direction.j),current_node) \
                     or \
-                    self.isForcedNeighbor(Grid(current_node.i+direction.i,current_node.j+direction.i),current_node):
+                    self.isForcedNeighbor(Grid(current_node.i+direction.i,current_node.j+direction.j),current_node):
                 return current_node
-            if self.findJumpPoint(Node(current_node.i+direction.i,current_node,current_node.g+1,0,current_node,Grid(direction.i,0))):
+            if self.findJumpPoint(Node(current_node.i+direction.i,current_node.j,current_node.g+1,0,current_node,Grid(direction.i,0))):
                 return current_node
             if self.findJumpPoint(Node(current_node.i,current_node.j+direction.j,1+current_node.g,0,current_node,Grid(0,direction.j))):
                 return current_node
@@ -269,6 +269,7 @@ class Jps(object):
             for neighbor in self.neighbors:
                 jump_point = self.findJumpPoint(neighbor)
                 jump_point.h = self.calH(jump_point.grid)
+                jump_point.f = jump_point.g + jump_point.h
                 self.open_list.append(jump_point)
 
             del self.open_list[self.open_list.index(node)]
