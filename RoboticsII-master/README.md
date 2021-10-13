@@ -1,3 +1,0 @@
-# RoboticsII
-
-Course codes
