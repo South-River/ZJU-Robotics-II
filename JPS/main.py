@@ -4,7 +4,6 @@ from debug import Debugger
 from jps import Jps
 from feed_back_control import RobotAction
 from feed_back_control import RobotAction_backward
-from zero_blue_action import zero_blue_action
 import time
 import math
 
@@ -27,9 +26,6 @@ if __name__ == '__main__':
             time_start = time.time()
             path_x, path_y = jps.jpsSearcher(vision)
             time_end = time.time()
-            #print("JPS cost:", time_end - time_start)
-            #print(path_x)
-            #print(path_y)
             debugger.draw_all(path_x, path_y, vision.my_robot.x, vision.my_robot.y, jps.grid_map.obstacle_x, jps.grid_map.obstacle_y)
             if i%2 == 0:
                 move_robot = RobotAction(path_x,path_y)

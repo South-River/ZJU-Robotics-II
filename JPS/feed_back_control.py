@@ -13,11 +13,11 @@ class Point():
 
 class RobotAction():
     def __init__(self, path_x, path_y):
-        self.v_max = 1300
+        self.v_max = 1400
         self.mu = 0.5
         self.lamda = 60
-        self.k_1 = 0.7
-        self.k_2 = 1.5
+        self.k_1 = 0.0001
+        self.k_2 = 1
         self.rho = 0
         self.alpha = 0
         self.beta = 0
@@ -69,11 +69,11 @@ class RobotAction():
 
 class RobotAction_backward():
     def __init__(self, path_x, path_y):
-        self.v_max = 1300
+        self.v_max = 1400
         self.mu = 0.5
         self.lamda = 60
-        self.k_1 = 0.7
-        self.k_2 = 1.5
+        self.k_1 = 0.0001
+        self.k_2 = 1
         self.rho = 0
         self.alpha = 0
         self.beta = 0
