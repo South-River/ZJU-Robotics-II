@@ -2,7 +2,7 @@
 
 ## Path Plan
 
-JPS，平均用时0.01s
+JPS，写的不是很好，平均用时0.01s
 
 ## Trajectory Plan
 
