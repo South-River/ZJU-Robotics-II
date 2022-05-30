@@ -1,5 +1,7 @@
 # ZJU Robotics II
 
+![Demo](1634140555750.gif)
+
 ## Path Plan
 
 JPS，写的不是很好，似乎有点bug，不过每次在想去复现bug时都不会出现。平均用时0.01s。
